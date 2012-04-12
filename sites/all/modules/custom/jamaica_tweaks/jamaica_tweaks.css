@@ -1,0 +1,9 @@
+/*
+* Jamaica Tweaks CSS - hover states etc
+*/
+
+.view-id-game{width:600px; margin:0 auto}
+.view-id-game .views-row{float:left; margin:5px;}
+
+.views-field-field-default-image{cursor:pointer}
+.views-field-field-hover-image{display:none;}

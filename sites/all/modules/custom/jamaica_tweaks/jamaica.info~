@@ -1,0 +1,13 @@
+name = Jamaica_tweaks
+description = "jamaica_tweaks"
+package = Custom Block Modules 
+core = 7.x
+dependencies[] = block
+files[] = mapheader.test
+files[] = mapheader.module
+files[] = mapheader.install
+
+; Information added by drupal.org packaging script on 2011-07-18
+version = "7.x-1.x-dev"
+core = "7.x"
+

@@ -1,0 +1,86 @@
+<?php
+// $Id: simple_contest_levels.module,v 1.1.2.1 2010/07/09 04:36:13 vinoth.3v Exp $
+
+/**
+ * @file
+ *
+ * simple_contest_levels custom module
+ */
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function simple_contest_levels_form_simple_contest_content_type_settings_form_alter(&$form, &$form_state) {
+
+  module_load_include('inc', 'simple_contest_levels', 'simple_contest_levels.form');
+
+  _simple_contest_levels_content_type_settings_form_alter($form, $form_state);
+
+}
+
+/**
+ * Validation for date repeat form element.
+ *
+ * Create multiple values from the RRULE results.
+ * TODO: Lots more work needed here.
+ */
+function simple_contest_levels_content_type_settings_form_validate($element, &$form_state) {
+
+  module_load_include('inc', 'simple_contest_levels', 'simple_contest_levels.form');
+  _simple_contest_levels_content_type_settings_form_validate($element, $form_state);
+
+}
+
+/**
+ * Validation for date repeat form element.
+ *
+ * Create multiple values from the RRULE results.
+ * Lots more work needed here.
+ */
+function simple_contest_levels_content_type_settings_submit($element, &$form_state) {
+
+  module_load_include('inc', 'simple_contest_levels', 'simple_contest_levels.form');
+  _simple_contest_levels_content_type_settings_submit($element, $form_state);
+
+}
+
+/**
+ * Implementation of hook_cron().
+ */
+function simple_contest_levels_cron() {
+
+  module_load_include('inc', 'simple_contest_levels', 'simple_contest_levels.cron');
+  _simple_contest_levels_cron();
+
+}
+
+/**
+ * Implementation of hook_simple_contest().
+ */
+function simple_contest_levels_simple_contest($op, $a2 = NULL, $a3 = NULL){
+
+  if ($op == 'default_settings') {
+    return array(
+      'levels_enabled_type' => '',
+      'level_create_freq' => '',
+      'level_create_period' => '',
+    );
+  }
+  
+  if($op == SIMPLE_CONTEST_STATUS_COMPLETED && $a3){
+  	
+  	module_load_include('inc', 'simple_contest_levels', 'simple_contest_levels.helper');
+    _simple_contest_levels_simple_contest_completed($op, $a2, $a3);
+    
+  }
+  
+}
+
+
+function simple_contest_levels_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'simple_contest_levels') . '/views',
+  );
+}
+

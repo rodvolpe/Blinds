@@ -1,0 +1,11 @@
+name = jamaica_tweaks
+description = "jamaica_tweaks"
+package = Custom Block Modules 
+core = 7.x
+dependencies[] = block
+
+
+; Information added by drupal.org packaging script on 2011-07-18
+version = "7.x-1.x-dev"
+core = "7.x"
+

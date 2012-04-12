@@ -1,0 +1,19 @@
+; $Id: simple_contest_levels.info,v 1.1.2.1 2010/07/09 04:36:13 vinoth.3v Exp $
+name = Simple Contest Levels
+description = "Provides the facility to create Multiple Contest levels to the Simple Contest module."
+core = 6.x
+dependencies[] = simple_contest
+package = "Contest"
+
+; Information added by drupal.org packaging script on 2009-11-23
+version = "6.x-1.0-dev"
+core = "6.x"
+project = "simple_contest"
+datestamp = "1258977639"
+
+; Information added by drupal.org packaging script on 2012-03-13
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "simple_contest"
+datestamp = "1331642352"
+

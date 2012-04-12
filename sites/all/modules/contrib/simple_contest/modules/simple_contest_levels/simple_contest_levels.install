@@ -1,0 +1,35 @@
+<?php
+// $Id: simple_contest_levels.install,v 1.1.2.2 2010/07/10 04:59:23 vinoth.3v Exp $
+
+function simple_contest_levels_install() {
+  drupal_install_schema('simple_contest_levels');
+}
+
+function simple_contest_levels_schema() {
+
+  $schema['simple_contest_levels'] = array(
+    'fields' => array(
+		'nid' => array(
+        	'description' => t('The primary identifier for contest node.'),
+        	'type' => 'int',
+        	'unsigned' => TRUE,
+        	'not null' => FALSE),
+  		'pnid' => array(
+        	'type' => 'int',
+			'description' => t('Previous contest Node ID'),
+        	'not null' => FALSE),
+  		'timestamp' =>  array(
+        	'type' => 'int',
+  			'description' => t('Timestamp when this new contest should be created.'),
+        	'not null' => FALSE),
+  	),
+	'primary key' => array('nid', 'pnid'),
+  );
+
+  return $schema;
+}
+
+
+function simple_contest_levels_uninstall() {
+  drupal_uninstall_schema('simple_contest_levels');
+}

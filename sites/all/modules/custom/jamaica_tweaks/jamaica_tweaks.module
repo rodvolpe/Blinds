@@ -1,0 +1,72 @@
+<?php
+
+function jamaica_tweaks_block_info() {
+    $blocks['jamaica_tweaks_block'] = array(
+        // info: The name of the block.
+        'info' => t('Jamaican Tweaks'),
+        //'region' => 'sidebar_first', // Not usually provided.
+        'cache' => DRUPAL_CACHE_PER_ROLE, // default
+    );
+    return $blocks;
+}
+
+function jamaica_tweaks_block_configure($delta = '') {
+    $form = array();
+    if ($delta == 'jamaica_tweaks_block') {
+        // All we need to provide is the specific configuration options for our
+        $form['jamaica_tweaks_string'] = array(
+            '#type' => 'textfield',
+            '#title' => t('Block contents'),
+            '#size' => 60,
+            '#description' => t('aaaa'),
+            '#default_value' => variable_get('jamaica_tweaks_string', t('bbbb')),
+        );
+    }
+    return $form;
+}
+
+function jamaica_tweaks_block_save($delta = '', $edit = array()) {
+    // We need to check $delta to make sure we are saving the right block.
+    if ($delta == 'jamaica_tweaks_block') {
+        // Have Drupal save the string to the database.
+        variable_set('jamaica_tweaks_string', $edit['jamaica_tweaks_string']);
+    }
+    return;
+}
+
+function jamaica_tweaks_block_view($delta = '') {
+    //The $delta parameter tells us which block is being requested.
+    switch ($delta) {
+        case 'jamaica_tweaks_block':
+            $block['subject'] = t('Jam tweaks');
+            $block['content'] = jamaica_tweaks_contents($delta);
+            break;
+    }
+    return $block;
+}
+
+
+function jamaica_tweaks_contents($which_block) {
+	if ($which_block == 'jamaica_tweaks_block') {
+	drupal_add_css("sites/all/modules/custom/jamaica_tweaks/jamaica_tweaks.css");
+	drupal_add_js("http://maps.google.com/maps/api/js?v=3.7&sensor=true&region=GB", array('preprocess' => FALSE));
+	drupal_add_js("sites/all/modules/custom/jamaica_tweaks/jamaica_tweaks.js");	
+	
+	$game = views_embed_view('game', 'game_block');
+	//$game = views_get_view_result('game', 'game_block');
+	print $game;
+	//dpm(
+}    
+	
+}
+
+
+
+
+
+
+
+
+
+
+

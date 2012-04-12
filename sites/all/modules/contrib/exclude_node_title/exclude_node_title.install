@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * @author Gabriel Ungureanu
+ * gabriel.ungreanu@ag-prime.com
+ */
+
+/**
+ * Implements hook_install().
+ */
+function exclude_node_title_install() {
+  // attach default permission to use exclude node title
+  $res = db_query("SELECT rid FROM {role}");
+  foreach ($res as $role) {
+    db_query("INSERT INTO {role_permission} (`rid`, `permission`, `module`)
+        VALUES (:rid, 'use exclude node title', 'exclude_node_title')",
+            array(':rid' => $role->rid));
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function exclude_node_title_uninstall() {
+  variable_del('exclude_node_title_nid_list');
+  variable_del('exclude_node_title_remove_title');
+  variable_del('exclude_node_title_content_type_values');
+}
