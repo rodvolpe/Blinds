@@ -1,0 +1,18 @@
+command sheet
+
+live update db from git mys name of db < new .sql file
+ex.
+mys videojam < video.sql
+
+
+
+___________ Drush 
+
+db sync 
+
+ex      from stager to dev   
+sql-sync @if.stage @if.dev
+
+resetting user(admin) password 
+drush upwd --password="123" admin
+

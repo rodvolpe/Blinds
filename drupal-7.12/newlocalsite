@@ -1,0 +1,22 @@
+New local site
+
+**might need SUDO
+/etc/apache2/sites-available/
+
+**copy from current local
+sudo cp joost newsite name
+
+**open new site file
+sudo gedit newsite name
+
+**update hosts site file
+sudo gedit /etc/hosts
+
+**enable site 
+sudo a2ensite newsite name
+
+
+
+
+
+
