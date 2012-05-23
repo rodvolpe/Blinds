@@ -1,0 +1,215 @@
+<?php
+
+function videojam_vote_menu() {
+    $items['video/%'] = array(
+        'page callback' => 'videojam_vote_video_page',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['videovote/%'] = array(
+        'page callback' => 'videojam_vote_ajax',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['videologin'] = array(
+        'page callback' => 'videojam_vote_login',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+
+    return $items;
+}
+
+function videojam_vote_video_page() {
+    global $user;
+    $uid = $user->uid;
+
+    //print 'userid=' . $uid;
+    drupal_add_js("sites/all/modules/custom/videojam_vote/videojam_vote.js");
+    drupal_add_css("sites/all/modules/custom/videojam_vote/videojam_vote.css");
+    
+    $nid = arg(1);
+
+    $n = node_load($nid);
+
+    if (isset($n->field_vote['und'])) {
+        $vote_count = $n->field_vote['und'][0]['value'];
+    } else {
+        $vote_count = 0;
+    }
+
+
+    $video = views_embed_view('video_voter', 'single_vid', $nid);
+    $video_vote = views_embed_view('votes', 'votes', $nid);
+
+
+    $html = $video;
+    $html .= $video_vote;
+    $html .= '<div id="video-jam-btns">';
+    $html .= '<div id="share-btn"><a href="#">Share</a></div>';
+    if ($uid != 0) {
+        $html .= '<div id="vote-btn"><a href="#" title="' . $nid . '">Vote</a> <!--[<span id="vote-count">' . $vote_count . '</span> votes]--></div>';
+    } else {
+        $html .= '<div id="vote-btn-login"><a href="#" title="' . $nid . '">Login to Vote</a></div>';
+    }
+
+    $html .= '</div>';
+    $html .= '<div id="video-facebook-wall">';
+    $html .= '<div class="fb-comments" data-href="https://videojam.zoocha.com/video/'. $nid .'" data-num-posts="8" data-width="488"></div>';
+    $html .= '</div>';
+ 
+    return $html;
+}
+
+function videojam_vote_ajax() {
+    global $user;
+    $nid = arg(1);
+    $uid = $user->uid;
+    $the_time = time();
+    $todays_date = date('d-m-Y', $the_time);
+    $todays_ts = strtotime($todays_date);
+
+    $user_votes = votingapi_select_votes(array('entity_id' => $nid, 'uid' => $uid, 'timestamp' => $todays_ts));
+    if (!$user_votes) {
+        //Cast the Vote if user hasn't today
+        $votes = array(
+            'entity_type' => 'node',
+            'entity_id' => $nid,
+            'value_type' => 'points',
+            'value' => '1',
+            'uid' => $uid,
+        );
+        votingapi_set_votes($votes, array());
+        //Update the vote field on this node by 1
+        //$n = node_load($nid);
+        //$vote_count_before = $n->field_vote['und'][0]['value'];
+        //Could be worth doing a sum up of all votes from the db, then store.. incase there's inconsistencies
+
+        //$n->field_vote['und'][0]['value'] = ($vote_count_before + 1);
+       // node_save($n);
+        print '0';
+    } else {
+        print '1';
+    }
+}
+
+function videojam_vote_login() {
+	global $user;
+    $uid = $user->uid;
+    
+    if($uid == 0){    
+		$path_fb = "sites/all/modules/custom/videojam_vote/facebook.php";
+		require_once $path_fb;
+		$facebook = new Facebook(array('appId' => '108386179296851', 'secret' => '196090b60d2acf007416876c8aa26d52', 'cookie' => true,));
+		$fb_user = $facebook->getUser();
+		try {
+			$fb_user = $facebook->api('/me');
+		} catch (FacebookApiException $e) {
+			error_log($e);
+			$fb_user = null;
+		}
+
+		if ($fb_user) {
+			$me = $facebook->api('/me');
+			//print_r($me);
+
+			$fb_id = $me['id'];
+			$fb_fullname = $me['name'];
+			$fb_fname = $me['first_name'];
+			$fb_sname = $me['last_name'];
+			$fb_gender = $me['gender'];
+			$fb_name = 'fbid' . $fb_id;
+			$fb_locale = $me['locale'];
+
+			if (!isset($me['email'])) {
+				$fb_email = $fb_name . '@jamaicazoocha.com';
+			} else {
+				$fb_email = $me['email'];
+			}
+			if (!isset($me['birthday'])) {
+				$fb_birthday = 'no birthday';
+			} else {
+				$fb_birthday = $me['birthday'];
+			}
+
+			$result = db_query('SELECT u.mail, u.uid FROM {users} u WHERE (u.name = :name)', array(':name' => $fb_name));
+			$record = $result->fetchObject();
+			if ($record) {
+				jamaica_tweaks_login_credentials($fb_name, 'jampassword123');
+			} else {
+				//Save the user into Drupal,
+				if (!isset($fb_email)) {
+					$fb_email = $fb_name . '@jamaicazoocha.com';
+				}
+				$user_array = array(
+					'name' => $fb_name,
+					'mail' => $fb_name . '@jamaicazoocha.com',
+					'pass' => 'jampassword123',
+					'status' => '1',
+					'init' => $fb_email,
+					'roles' => array(2 => 'authenticated user'),
+					'field_user_fbid' => array('und' => array('0' => array('value' => $fb_id))),
+					'field_user_fbname' => array('und' => array('0' => array('value' => $fb_fname . ' ' . $fb_sname))),
+					'field_user_fbfn' => array('und' => array('0' => array('value' => $fb_fname))),
+					'field_user_fbln' => array('und' => array('0' => array('value' => $fb_sname))),
+					'field_user_fbmail' => array('und' => array('0' => array('value' => $fb_email))),
+					'field_user_fbgender' => array('und' => array('0' => array('value' => $fb_gender))),
+					'field_user_fblocale' => array('und' => array('0' => array('value' => $fb_locale))),
+					'field_user_fbdob' => array('und' => array('0' => array('value' => $fb_birthday))),
+				);
+				$new_user = user_save((object) array('is_new' => true), $user_array);
+				watchdog('user', 'New user: %name (%email) (%fb_uid)', array('%name' => $fb_name, '%email' => $fb_email, '%fb_uid' => $fb_id,));
+				jamaica_tweaks_login_credentials($fb_name, 'jampassword123');
+			}
+		}
+	} 
+}
+
+function jamaica_tweaks_login_credentials($username, $password) {
+    if (user_authenticate($username, $password)) {
+        $user_obj = user_load_by_name($username);
+        $form_state = array();
+        $form_state['uid'] = $user_obj->uid;
+        user_login_submit(array(), $form_state);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function videojam_vote_record_time() {
+    Global $user;
+    $mins = arg(2);
+    $secs = arg(3);
+    $mil = arg(4);
+    $uid = arg(5);
+
+    $user_fields = user_load($uid);
+    //dpm($user_fields);
+
+    $node = new stdClass();
+    $node->type = "time";
+    $node->title = 'time_made_by_' . $user_fields->field_user_fbid['und'][0]['value'];
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 1;
+    $node->field_uid['und'][0]['value'] = $uid;
+    $node->field_fb_id['und'][0]['value'] = $user_fields->field_user_fbid['und'][0]['value'];
+    $node->field_user_name['und'][0]['value'] = $user_fields->field_user_fbname['und'][0]['value'];
+    $node->field_user_mail['und'][0]['value'] = $user_fields->field_user_fbmail['und'][0]['value'];
+    $node->field_user_min['und'][0]['value'] = $mins;
+    $node->field_user_sec['und'][0]['value'] = $secs;
+    $node->field_user_mil['und'][0]['value'] = $mil;
+    node_object_prepare($node);
+    $node = node_submit($node);
+    node_save($node);
+
+    $data = 1;
+    $json = drupal_json_output($data);
+    print($json);
+	
+    //post to wall
+   
+    exit();
+}

@@ -1,0 +1,335 @@
+<?php
+/*
+Plan:
+
+List blind types 
+
+Click through from blind type page to either "roller blind" or "roman blind". joost.com/blind/roller/fabric or joost.com/blind/roman/fabric
+
+Click
+
+*/
+
+//roller CYO
+function product_builder_menu() {
+  $items['create-your-own/roller'] = array(
+      'title' => 'Roller Blinds Fabric Selection',
+      'page callback' => 'product_builder_roller_blinds', //fabric
+      'page arguments' => array(1,2),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+  $items['create-your-own/roller/%'] = array(
+      'title' => 'Roller Blinds Side Selection',
+      'page callback' => 'product_builder_roller_side', //side
+      'page arguments' => array(1,2),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+   $items['create-your-own/roller/%/%'] = array(
+      'title' => 'Roller Blinds Chain Selection',
+      'page callback' => 'product_builder_roller_blinds_chain_type',
+      'page arguments' => array(1,2,3),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );  
+  $items['create-your-own/roller/%/%/%'] = array(
+      'title' => 'Roller Blinds Shape Selection',
+      'page callback' => 'product_builder_roller_blinds_shape',
+      'page arguments' => array(1,2,3,4),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+  
+  $items['create-your-own/roller/%/%/%/%'] = array(
+      'title' => 'Roller Blinds Braid Selection',
+      'page callback' => 'product_builder_roller_blinds_braid',
+      'page arguments' => array(1,2,3,4,5),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+  
+  $items['create-your-own/roller/%/%/%/%/%'] = array(
+      'title' => 'Roller Blinds Confirm Selections',
+      'page callback' => 'product_builder_roller_blinds_confirm',
+      'page arguments' => array(1,2,3,4,5,6),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+
+/*
+
+  $items['product/%/roman'] = array(
+      'title' => 'Roman Blinds Side Selection',
+      'page callback' => 'product_builder_roman_blinds',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+  $items['product/%/roman/%'] = array(
+      'title' => 'Roman Blinds Chain Selection',
+      'page callback' => 'product_builder_roman_blinds_type',
+      'page arguments' => array(1,2,3),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );*/
+  
+//roller value product 
+  $items['value/roller'] = array(
+      'title' => 'Roller Blinds Value Fabric Selection',
+      'page callback' => 'product_builder_roller_value_blinds', //fabric
+      'page arguments' => array(1,2),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+    $items['value/roller/%'] = array(
+      'title' => 'Roller Blinds Value Side Selection',
+      'page callback' => 'product_builder_roller_value_side', //side
+      'page arguments' => array(1,2),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+     $items['value/roller/%/%'] = array(
+      'title' => 'Select Roll Type',
+      'page callback' => 'product_builder_roller_value_roll',
+      'page arguments' => array(1,2,3,4),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+      
+      $items['value/roller/%/%/%'] = array(
+      'title' => 'Select Fitting',
+      'page callback' => 'product_builder_roller_value_fitting',
+      'page arguments' => array(1,2,3,4,5),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+      
+      $items['value/roller/%/%/%/%'] = array(
+      'title' => 'Roller Value Confirm Selections',
+      'page callback' => 'product_builder_roller_blinds_confirm_value',
+      'page arguments' => array(1,2,3,4,5,6),
+      'access callback' => TRUE,
+      'file' => 'product_builder.pages.inc',
+  );
+  
+  
+  return $items;
+}
+
+
+
+/*
+ * Determin if a product is in stock, given its nid.
+ */
+function stock_test($nid){
+  $node = node_load($nid);
+  $stock = $node->field_product_stock_on_off['und'][0]['value'];
+  if($stock == "1"){
+    return true;
+  }
+  return false;
+}
+
+/*
+ * Determin if a complete blinds selection is in stock, given a series of nid's.
+ */
+function stock_test_complete_blind(){
+  $args = func_get_args();
+  $product_names = array();
+  foreach($args AS $value){
+    $node = node_load($value);
+    $stock = $node->field_product_stock_on_off['und'][0]['value'];
+    if($stock == "0"){
+      $product_names[] = $node->title;
+    }
+  }
+
+  if(count($product_names) > 0){
+    return $product_names;
+  }else{
+    return false;
+  }
+}
+
+/*
+ * Determine the cost of the blind combination TODODODOODO
+ */
+function calculate_cost(){
+  $args = func_get_args();
+  $cost = array();
+  foreach($args AS $value){
+    $node = node_load($value);
+    $stock = $node->field_product_price['und'][0]['value'];
+    if($stock == "0"){
+      $cost[] = $node->title;
+    }
+  }
+
+  if(count($cost) > 0){
+    return $cost;
+  }else{
+    return false;
+  }
+}
+
+// Delete button for blind configuration
+function product_builder_cyo_delete_form($form, &$form_state, $nid) {
+ 
+  $form['cyo_delete'] = array(
+    '#type' => 'hidden',
+    '#value' => $nid,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete'),
+  );
+  return $form;
+}
+
+function product_builder_cyo_delete_form_submit($form, $form_state) {
+  global $user;
+  $nid = $form_state['input']['cyo_delete'];
+  node_delete($nid);
+  $node = node_load($nid);
+  }
+
+// add to cart button for blind configuration
+function product_builder_cyo_add_to_cart_form($form, &$form_state, $nid) {
+  $form['cyo_nid'] = array(
+    '#type' => 'hidden',
+    '#value' => $nid,
+  );
+ 
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Add to cart'),
+  );
+  return $form;
+}
+
+// Submitting form and creating new line item blind configuration 
+
+function product_builder_cyo_add_to_cart_form_submit($form, $form_state) {
+
+  global $user;
+ 
+  $nid = $form_state['input']['cyo_nid']; 
+  //dpm($nid);
+       
+  
+  //$nid = $form_state['input']['cyo_nid'];
+  $default_currency = commerce_currency_load();
+  
+  // load the order, create new one if unexisting
+  if (!$order = commerce_cart_order_load($user->uid)) {  
+    $order = commerce_cart_order_new($user->uid);
+  }
+  
+  // Create a new line item
+  $line_item = commerce_line_item_load('cyo');
+ 
+  if ($line_item = 'cyo' ){
+  $line_item = commerce_line_item_new('cyo', $order->order_id);
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+  $line_item_wrapper = entity_metadata_wrapper('commerce_line_item', $line_item);
+  
+  // Populate the line item fields
+  $line_item_wrapper->quantity = 1;
+  $line_item_wrapper->line_item_label = '1';
+  $line_item_wrapper->field_cyo_ref = '1';
+  $line_item_wrapper->commerce_product = '222';
+  $line_item_wrapper->commerce_unit_price->amount = '500';
+  $line_item_wrapper->commerce_unit_price->currency_code = $default_currency['code'];
+  $line_item_wrapper->field_cyo_price->amount = '5000';
+  $line_item_wrapper->field_cyo_price->currency_code = $default_currency['code'];
+  $line_item_wrapper->commerce_display_path = "node/$nid";
+   
+  // Save the line item and then the order with the new line item attatched
+  commerce_line_item_save($line_item);
+  $order_wrapper->commerce_line_items[] = $line_item;
+  dpm($line_item);
+  commerce_order_save($order);
+  }
+}
+
+/*Delete button for blind configuration value
+function product_builder_value_delete_form($form, &$form_state, $nid) {
+ 
+  $form['value_delete'] = array(
+    '#type' => 'hidden',
+    '#value' => $nid,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete'),
+  );
+  return $form;
+}
+
+function product_builder_value_delete_form_submit($form, $form_state) {
+  global $user;
+  $nid = $form_state['input']['value_delete'];
+  node_delete($nid);
+  $node = node_load($nid);
+  }
+*/
+/* add to cart button for blind configuration
+function product_builder_value_add_to_cart_form($form, &$form_state, $nid) {
+  $form['cyo_nid'] = array(
+    '#type' => 'hidden',
+    '#value' => $nid,
+  );
+ 
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Add to cart'),
+  );
+  return $form;
+}
+*/
+/* Submitting form and creating new line item blind configuration value 
+
+function product_builder_value_add_to_cart_form_submit($form, $form_state) {
+
+  global $user;
+ 
+  $nid = $form_state['input']['value_nid']; 
+       
+  
+  //$nid = $form_state['input']['cyo_nid'];
+  $default_currency = commerce_currency_load();
+  
+  // load the order, create new one if unexisting
+  if (!$order = commerce_cart_order_load($user->uid)) {  
+    $order = commerce_cart_order_new($user->uid);
+  }
+  
+  // Create a new line item
+  $line_item = commerce_line_item_load('value');
+ 
+  if ($line_item = 'value' ){
+  $line_item = commerce_line_item_new('value', $order->order_id);
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+  $line_item_wrapper = entity_metadata_wrapper('commerce_line_item', $line_item);
+  
+  // Populate the line item fields
+  $line_item_wrapper->quantity = 1;
+  $line_item_wrapper->line_item_label = '$nid';
+  $line_item_wrapper->field_value_ref = $nid;
+  $line_item_wrapper->commerce_product = '235';
+  $line_item_wrapper->commerce_unit_price->amount = '100';
+  $line_item_wrapper->commerce_unit_price->currency_code = $default_currency['code'];
+  $line_item_wrapper->field_value_price->amount = '1000';
+  $line_item_wrapper->field_value_price->currency_code = $default_currency['code'];
+  $line_item_wrapper->commerce_display_path = "node/$nid";
+       
+  // Save the line item and then the order with the new line item attatched
+  commerce_line_item_save($line_item);
+  $order_wrapper->commerce_line_items[] = $line_item;
+ // dpm($line_item);
+  commerce_order_save($order);
+  }
+  
+
+}*/

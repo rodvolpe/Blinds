@@ -1,0 +1,14 @@
+/*
+    Document   : joost
+    Created on : 31-Jan-2012, 11:48:45
+    Author     : dave
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#content{}
+  #content .view .view-content li{float:left; width:25%; padding:10px 0;}

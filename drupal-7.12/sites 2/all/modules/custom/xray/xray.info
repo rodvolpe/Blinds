@@ -1,0 +1,5 @@
+name = xray
+description = Shows internal structures and connections of the website
+core = 7.x
+
+

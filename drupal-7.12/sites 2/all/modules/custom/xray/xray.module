@@ -1,0 +1,33 @@
+<?php
+
+/*
+ * Helps site builders and module developers investigate a site.
+ * 
+ */
+
+
+//
+//Implments hook_form_alter() to show which form's identifier. 
+//
+
+function xray_form_alter(&$form, &$form_state, $form_id){
+  $form['xray_display_form_id']= array(
+    '#type'=> 'item',
+    '#title'=> t('Form ID'),
+    '#markup'=> $form_id,
+    '#weight'=> -100,
+  );
+ // dpm($form);
+  //print_r($form);
+}
+
+/* Change the width of filter fields and the label of the submit button on the 'board' form */
+function xray_views_filters($form) {
+  if ($form['#view_name'] == 'video_gallery') {
+    $form['filter2']['#size']=15; 
+    $form['filter3']['#size']=15; 
+    $form['submit']['#value']='חפש';
+  }
+  return theme_views_filters ($form);
+  dpm($form);
+}

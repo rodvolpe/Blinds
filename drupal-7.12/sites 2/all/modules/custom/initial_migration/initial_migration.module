@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the initial migration feature.
+ */
+
+include_once('initial_migration.features.inc');

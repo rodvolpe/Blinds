@@ -1,0 +1,205 @@
+ID;Type;Product Category;Product subset;Product code;Friendly name;Stock;Stock (meters, units);Price (£);Price-up mechanism;Width Restriction Roller;Width Restriction Roman;Shape Restriction;Type Restriction;Control Restriction;ORIGINAL Restriction (this will be ignored);Status;Products available for
+1;FABRIC;Fabric;Print dim-out;FAB0001;Tudor Moreton;1;500;6.67;hw;2.4;3;;;;width roman 2.4m, side control and spring 3m, electric by overall weight of xx;;MtM( roman, side control roller,spring roller, electric) DIY (side control)
+2;FABRIC;Fabric;Plain dim-out;FAB0002;Henley Strawberrys & Cream;0;500;6.67;hw;2.4;3;;;;;;MtM( roman, side control roller,spring roller, electric) DIY (side control)
+3;FABRIC;Fabric;Voile;FAB0003;Kyoto Sunlight;1;500;6.67;hw;2.4;3;;;;;;MtM( roman, side control roller,spring roller, electric) DIY (side control)
+4;FABRIC;Fabric;Print blackout;FAB0004;Aqua Marine;0;500;3.42;hw;2.4;3;;;;;DisconLine;MtM( roman, side control roller,spring roller, electric)
+5;FABRIC;Fabric;Plain blackout;FAB0005;Bali Linen Natural;1;;3.42;hw;2.4;3;;;;;Active;MtM( roman, side control roller,spring roller, electric) DIY (side control)
+6;FABRIC;Fabric;;FAB0006;Bali Linen White;0;;3.42;hw;2.4;3;;;;;;MtM( roman, side control roller,spring roller, electric)
+7;FABRIC;Fabric;;FAB0007;Cortina Natural;1;;3.42;hw;2.4;3;;;;;;MtM( side control roller,spring roller, electric)
+8;FABRIC;Fabric;;FAB0008;Maria Ivory;0;;3.42;hw;2.4;3;;;;;;MtM( roman)
+9;FABRIC;Fabric;;FAB0009;Cotswold Linen;1;;3.42;hw;2.4;3;;;;;;DIY (side control)
+10;FABRIC;Fabric;;FAB0010;Brown Suede;0;;3.42;hw;2.4;3;;;;;;
+11;FABRIC;Fabric;;FAB0011;Screen White;1;;3.42;hw;2.4;3;;;;;;
+12;FABRIC;Fabric;;FAB0012;Chinese White;0;;3.42;hw;2.4;3;;;;;;
+13;FABRIC;Fabric;;FAB0013;Carnival China White;1;;3.42;hw;2.4;3;;;;;;
+14;FABRIC;Fabric;;FAB0014;Jamboree Ice;0;;2.31;hw;2.4;3;;;;;;
+15;FABRIC;Fabric;;FAB0015;Arctic;1;;3.42;hw;2.4;3;;;;;;
+16;FABRIC;Fabric;;FAB0016;Shell;0;;3.42;hw;2.4;3;;;;;;
+17;FABRIC;Fabric;;FAB0017;Maize;1;;3.42;hw;2.4;3;;;;;;
+18;FABRIC;Fabric;;FAB0018;Cream;0;;3.42;hw;2.4;3;;;;;;
+19;FABRIC;Fabric;;FAB0019;Carnival Ivory;1;;3.42;hw;2.4;3;;;;;;
+20;FABRIC;Fabric;;FAB0020;Carnival Ecru;0;;3.42;hw;2.4;3;;;;;;
+21;FABRIC;Fabric;;FAB0021;Carnival Primrose;1;;3.42;hw;2.4;3;;;;;;
+22;FABRIC;Fabric;;FAB0022;Colourtex Biscuit;0;;2.45;hw;2.4;3;;;;;;
+23;FABRIC;Fabric;;FAB0023;Oakwood beige;1;;3.42;hw;2.4;3;;;;;;
+24;FABRIC;Fabric;;FAB0024;Straw;0;;3.42;hw;2.4;3;;;;;;
+25;FABRIC;Fabric;;FAB0025;Dark Beige;1;;3.42;hw;2.4;3;;;;;;
+26;FABRIC;Fabric;;FAB0026;Evening Buttermilk;0;;3.42;hw;2.4;3;;;;;;
+27;FABRIC;Fabric;;FAB0027;Toffee;1;;3.42;hw;2.4;3;;;;;;
+28;FABRIC;Fabric;;FAB0028;Stone;0;;3.42;hw;2.4;3;;;;;;
+29;FABRIC;Fabric;;FAB0029;Limestone;1;;3.42;hw;2.4;3;;;;;;
+30;FABRIC;Fabric;;FAB0030;Carnival Caramel;0;;3.42;hw;2.4;3;;;;;;
+31;FABRIC;Fabric;;FAB0031;Carnival Cocoa;1;;3.42;hw;2.4;3;;;;;;
+32;FABRIC;Fabric;;FAB0032;Latte;0;;3.42;hw;2.4;3;;;;;;
+33;FABRIC;Fabric;;FAB0033;Carnival Mocha;1;;3.42;hw;2.4;3;;;;;;
+34;FABRIC;Fabric;;FAB0034;Carnival Slate;0;;3.42;hw;2.4;3;;;;;;
+35;FABRIC;Fabric;;FAB0035;Carnival Flint;1;;3.42;hw;2.4;3;;;;;;
+36;FABRIC;Fabric;;FAB0036;B/O Arctic;0;;3.42;hw;2.4;3;;;;;;
+37;FABRIC;Fabric;;FAB0037;B/O Tundra;1;;2.31;hw;2.4;3;;;;;;
+38;FABRIC;Fabric;;FAB0038;B/O Polar;0;;2.31;hw;2.4;3;;;;;;
+39;FABRIC;Fabric;;FAB0039;B/O White;1;;2.31;hw;2.4;3;;;;;;
+40;FABRIC;Fabric;;FAB0040;Nocturne White;0;;5.32;hw;2.4;3;;;;;;
+41;FABRIC;Fabric;;FAB0041;Nocturne Grey;1;;5.32;hw;2.4;3;;;;;;
+42;FABRIC;Fabric;;FAB0042;B/O Toffee;0;;3.42;hw;2.4;3;;;;;;
+43;FABRIC;Fabric;;FAB0043;B/O Champagne;1;;3.42;hw;2.4;3;;;;;;
+44;FABRIC;Fabric;;FAB0044;B/O Stone;0;;3.42;hw;2.4;3;;;;;;
+45;FABRIC;Fabric;;FAB0045;Bari Chocolate;1;;3.42;hw;2.4;3;;;;;;
+46;FABRIC;Fabric;;FAB0046;Bari Grey;0;;3.42;hw;2.4;3;;;;;;
+47;FABRIC;Fabric;;FAB0047;B/O Slate;1;;3.42;hw;2.4;3;;;;;;
+48;FABRIC;Fabric;;FAB0048;B/O Blue;0;;3.42;hw;2.4;3;;;;;;
+49;FABRIC;Fabric;;FAB0049;B/O Cherry;1;;3.42;hw;2.4;3;;;;;;
+50;FABRIC;Fabric;;FAB0050;Voile White;0;;2.31;hw;2.4;3;;;;;;
+51;FABRIC;Fabric;;FAB0051;Voile Natural;1;;2.31;hw;2.4;3;;;;;;
+52;FABRIC;Fabric;;FAB0063;Pod grey;0;;1;hw;2.4;3;;;;;;
+53;FABRIC;Fabric;;FAB0064;Scattered leaves chrome;1;;1;hw;2.4;3;;;;;;
+54;FABRIC;Fabric;;FAB0065;Cars blue;0;;1;hw;2.4;3;;;;;;
+1001;CHAIN;Chain;standard, heavy duty;CHA0001;White;1;;0.3;h;;;;;;;;roman, side control roller
+1002;CHAIN;Chain;standard;CHA0002;Cream;0;;0.5;h;;;;;;;;roman, side control roller
+1003;CHAIN;Chain;standard;CHA0003;Chestnut;1;;0.5;h;;;;;;;;roman, side control roller
+1004;CHAIN;Chain;standard;CHA0004;Beige /Sand;0;;1;h;;;;;;;;roman, side control roller
+1005;CHAIN;Chain;standard, heavy duty;CHA0005;Metal;1;;0.7;h;;;;;;;;roman, side control roller
+1006;CHAIN;Chain;standard, heavy duty;CHA0006;Brass;0;;0.7;h;;;;;;;;roman, side control roller
+1007;CHAIN;Chain;standard;CHA0007;Clear;1;;1;h;;;;;;;;roman, side control roller
+1008;CHAIN;Chain;standard;CHA0008;Eggshell;0;;1;h;;;;;;;;roman, side control roller
+1009;CHAIN;Chain;standard;CHA0009;Marigold;1;;1;h;;;;;;;;roman, side control roller
+1010;CHAIN;Chain;standard;CHA0010;Scarlet;0;;1;h;;;;;;;;roman, side control roller
+1011;CHAIN;Chain;standard;CHA0011;Plum;1;;1;h;;;;;;;;roman, side control roller
+1012;CHAIN;Chain;standard;CHA0012;Sonata;0;;1;h;;;;;;;;roman, side control roller
+1013;CHAIN;Chain;standard;CHA0013;Cornflower;1;;1;h;;;;;;;;roman, side control roller
+1014;CHAIN;Chain;standard;CHA0014;Marine Blue;0;;1;h;;;;;;;;roman, side control roller
+1015;CHAIN;Chain;standard;CHA0015;Sapphire;1;;1;h;;;;;;;;roman, side control roller
+1016;CHAIN;Chain;standard;CHA0016;Jade;0;;1;h;;;;;;;;roman, side control roller
+1017;CHAIN;Chain;standard;CHA0017;Bramley;1;;1;h;;;;;;;;roman, side control roller
+1018;CHAIN;Chain;standard;CHA0018;Dark Green;0;;1;h;;;;;;;;roman, side control roller
+1019;CHAIN;Chain;standard;CHA0019;Grey;1;;1;h;;;;;;;;roman, side control roller
+1020;CHAIN;Chain;standard;CHA0020;Black;0;;1;h;;;;;;;;roman, side control roller
+1021;CHAIN;Chain;standard;CHA0021;Primrose;1;;1;h;;;;;;;;roman, side control roller
+1022;CHAIN;Chain;standard;CHA0022;Yellow;0;;1;h;;;;;;;;roman, side control roller
+2001;PULL CORDS;PullCord;;COR0001;Standard for Acorns;1;;1;fixed;;;;;;;;spring roller blind, electric
+2002;PULL CORDS;PullCord;;COR0002;Cable Cord Silver;0;;1;fixed;;;;;;;;spring roller blind, electric
+2003;PULL CORDS;PullCord;;COR0003;Cable Cord Whitewash;1;;1;fixed;;;;;;;;spring roller blind, electric
+2004;PULL CORDS;PullCord;;COR0004;Cable Cord Natural ;0;;1;fixed;;;;;;;;spring roller blind, electric
+2005;PULL CORDS;PullCord;;COR0005;Brown leather cord for glass teardrop;1;;1;fixed;;;;;;;;spring roller blind, electric
+2006;PULL CORDS;PullCord;n/a;COR0006;Black Rats tail cord;0;;1.33;fixed;;;;;;;;spring roller blind, electric
+2007;PULL CORDS;PullCord;;COR0007;Cable cord for Egg shaped pull;1;;2.33;fixed;;;;;;;;spring roller blind, electric
+2008;PULL CORDS;PullCord;;COR0008;Eyelets for leather strand pull;0;;2.25;fixed;;;;;;;;spring roller blind, electric
+2009;PULL CORDS;PullCord;;COR0009;No pull.;1;;3.25;fixed;;;;;;;;spring roller blind, electric
+2010;PULL CORDS;PullCord;;COR0010;Standard Acorn;0;;4.25;fixed;;;;;;;;spring roller blind, electric
+2011;PULL CORDS;PullCord;;COR0011;Wood Cylinder;1;;4.55;fixed;;;;;;;;spring roller blind, electric
+2012;PULL CORDS;PullCord;;COR0012;Wooden Pebble;0;;4.85;fixed;;;;;;;;spring roller blind, electric
+2013;PULL CORDS;PullCord;;COR0013;Wooden Ball 43mm Whitewash;1;;5.15;fixed;;;;;;;;spring roller blind, electric
+2014;PULL CORDS;PullCord;;COR0014;Aluminium Cylinder 80mm;0;;5.45;fixed;;;;;;;;spring roller blind, electric
+2015;PULL CORDS;PullCord;;COR0015;Two Tone Cylinder 60mm;1;;5.75;fixed;;;;;;;;spring roller blind, electric
+2016;PULL CORDS;PullCord;;COR0016;Glass Ball 35mm;0;;6.05;fixed;;;;;;;;spring roller blind, electric
+2017;PULL CORDS;PullCord;;COR0017;Wooden Ball Cocoa;1;;6.35;fixed;;;;;;;;spring roller blind, electric
+2018;PULL CORDS;PullCord;;COR0018;Woolie Cloud 55mm;0;;6.65;fixed;;;;;;;;spring roller blind, electric
+2019;PULL CORDS;PullCord;;COR0019;Woolie Aran 55mm;1;;6.95;fixed;;;;;;;;spring roller blind, electric
+2020;PULL CORDS;PullCord;;COR0020;Charleston Pearl 39mm;0;;7.25;fixed;;;;;;;;spring roller blind, electric
+2021;PULL CORDS;PullCord;;COR0021;Charleston Champagne 39mm;1;;7.55;fixed;;;;;;;;spring roller blind, electric
+2022;PULL CORDS;PullCord;;COR0022;Carpet Boule Wax 48mm;0;;7.85;fixed;;;;;;;;spring roller blind, electric
+2023;PULL CORDS;PullCord;;COR0023;Carpet Boule Straw 48mm;1;;8.15;fixed;;;;;;;;spring roller blind, electric
+2024;PULL CORDS;PullCord;;COR0024;Leather Cream 64mm;0;;8.45;fixed;;;;;;;;spring roller blind, electric
+2025;PULL CORDS;PullCord;;COR0025;Leather Brown 64mm;1;;8.75;fixed;;;;;;;;spring roller blind, electric
+2026;PULL CORDS;PullCord;;COR0026;Leather Black 64mm;0;;9.05;fixed;;;;;;;;spring roller blind, electric
+2027;PULL CORDS;PullCord;;COR0027;Glitter Egg Silver;1;;9.35;fixed;;;;;;;;spring roller blind, electric
+2028;PULL CORDS;PullCord;;COR0028;Glitter Egg Gold;0;;9.65;fixed;;;;;;;;spring roller blind, electric
+2029;PULL CORDS;PullCord;;COR0029;Iris Suede;1;;9.95;fixed;;;;;;;;spring roller blind, electric
+2030;PULL CORDS;PullCord;;COR0030;White wood barrel pull;0;;10.25;fixed;;;;;;;;spring roller blind, electric
+2031;PULL CORDS;PullCord;;COR0031;Brushed Steel cylinder;1;;10.55;fixed;;;;;;;;spring roller blind, electric
+2032;PULL CORDS;PullCord;;COR0032;Acrylic cylinder;0;;10.85;fixed;;;;;;;;spring roller blind, electric
+2033;PULL CORDS;PullCord;;COR0033;Glass ring;1;;11.15;fixed;;;;;;;;spring roller blind, electric
+2034;PULL CORDS;PullCord;;COR0034;Steel and Black;0;;11.45;fixed;;;;;;;;spring roller blind, electric
+2035;PULL CORDS;PullCord;;COR0035;Steel and Clear;1;;11.75;fixed;;;;;;;;spring roller blind, electric
+2036;PULL CORDS;PullCord;;COR0036;Anodised Aluminium Cylinder;0;;12.05;fixed;;;;;;;;spring roller blind, electric
+2037;PULL CORDS;PullCord;;COR0037;Egg Shaped Wood pull;1;;12.35;fixed;;;;;;;;spring roller blind, electric
+2038;PULL CORDS;PullCord;;COR0038;Black Leather strands with eyelet;0;;12.65;fixed;;;;;;;;spring roller blind, electric
+2039;PULL CORDS;PullCord;;COR0039;Glass teardrop;1;;12.95;fixed;;;;;;;;spring roller blind, electric
+2040;PULL CORDS;PullCord;;COR0040;Wooden Ball Natural;0;;13.25;fixed;;;;;;;;spring roller blind, electric
+2041;PULL CORDS;PullCord;;COR0041;Cable Navy;1;;13.55;fixed;;;;;;;;spring roller blind, electric
+2042;PULL CORDS;PullCord;;COR0042;Cable Seaweed;0;;13.85;fixed;;;;;;;;spring roller blind, electric
+2043;PULL CORDS;PullCord;;COR0043;Cable Ocean;1;;14.15;fixed;;;;;;;;spring roller blind, electric
+2044;PULL CORDS;PullCord;;COR0044;Handkerchief Bobbin Dark Oak;0;;14.45;fixed;;;;;;;;spring roller blind, electric
+2045;PULL CORDS;PullCord;;COR0045;Cable Urchin;1;;14.75;fixed;;;;;;;;spring roller blind, electric
+2046;PULL CORDS;PullCord;;COR0046;Cable Snapper;0;;15.05;fixed;;;;;;;;spring roller blind, electric
+2047;PULL CORDS;PullCord;;COR0047;Jute Twine Pull;1;;15.35;fixed;;;;;;;;spring roller blind, electric
+2048;PULL CORDS;PullCord;;COR0048;Jute Bark Pull;0;;15.65;fixed;;;;;;;;spring roller blind, electric
+2049;PULL CORDS;PullCord;;COR0049;Handkerchief Bobbin Light Oak;1;;15.95;fixed;;;;;;;;spring roller blind, electric
+2050;PULL CORDS;PullCord;;COR0050;Cable Chocolate;0;;16.25;fixed;;;;;;;;spring roller blind, electric
+2051;PULL CORDS;PullCord;;COR0051;Cream/Black Striped Cylinder.;1;;16.55;fixed;;;;;;;;spring roller blind, electric
+3001;SHAPE;Shape;contemporary;SHA0001;Anodised;0;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3002;SHAPE;Shape;contemporary;SHA0002;Powder Coated Silver;1;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3003;SHAPE;Shape;contemporary;SHA0003;Powder Coated Gold;0;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3004;SHAPE;Shape;contemporary;SHA0004;Powder Coated Chocolate;1;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3005;SHAPE;Shape;contemporary;SHA0005;Powder Coated Black;0;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3006;SHAPE;Shape;hampton;SHA0006;Natural;1;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3007;SHAPE;Shape;hampton;SHA0007;Oak;0;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3008;SHAPE;Shape;hampton;SHA0008;Truffle;1;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3009;SHAPE;Shape;hampton;SHA0009;Pine;0;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3010;SHAPE;Shape;hampton;SHA0010;Oak;1;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3011;SHAPE;Shape;hampton;SHA0011;Cinnamon;0;;1;w;2.4;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3012;SHAPE;Shape;padstow;SHA0012;Eyelets 40mm Bright Gold;1;;1;w;;;;;;No of eyelets per set width;;MtM( roman, side control roller,spring roller, electric)
+3013;SHAPE;Shape;padstow;SHA0013;Eyelets 40mm Bright Silver;0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3014;SHAPE;Shape;padstow;SHA0014;Eyelets 40mm Pewter;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3015;SHAPE;Shape;padstow;SHA0015;Eyelets 40mm Matt Gold (Brass);0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3016;SHAPE;Shape;padstow;SHA0016;Eyelets 40mm Matt Silver;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3017;SHAPE;Shape;padstow;SHA0017;Eyelets Silver;0;;1;w;;;;;;No of eyelets per set width - smaller eyelet so more per set width;;MtM( roman, side control roller,spring roller, electric)
+3018;SHAPE;Shape;padstow;SHA0018;Eyelets Natural;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3019;SHAPE;Shape;padstow;SHA0019;Eyelets Pewter;0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3020;SHAPE;Shape;padstow;SHA0020;Eyelets Matt Silver;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3021;SHAPE;Shape;padstow;SHA0021;Matt Gold (Brass);0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3022;SHAPE;Shape;padstow;SHA0022;Eyelets Gold;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3023;SHAPE;Shape;padstow;SHA0023;Nickel Eyelets 40mm;0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3024;SHAPE;Shape;padstow;SHA0024;Satin Nickel Eyelets 40mm;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3025;SHAPE;Shape;padstow;SHA0025;Antique Bronze Eyelets 40mm;0;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3026;SHAPE;Shape;padstow;SHA0026;Gunmetal Eyelets 40mm;1;;1;w;;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3027;SHAPE;Shape;Bertie;SHA0027;Brushed Steel Pole (for ball finial);0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3028;SHAPE;Shape;Bertie;SHA0028;Brushed Steel Pole (for cylinder finial);1;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3029;SHAPE;Shape;Bertie;SHA0029;Chrome Steel Pole (for crystal ball);0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3030;SHAPE;Shape;Bertie;SHA0030;Brass Steel Pole (for crystal ball);1;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3031;SHAPE;Shape;Bertie;SHA0031;Wood Pole 14mm Cream;0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3032;SHAPE;Shape;Bertie;SHA0032;Wood Pole 14mm Dark Oak;1;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3033;SHAPE;Shape;Bertie;SHA0033;Wood Pole 14mm Light Oak;0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3034;SHAPE;Shape;Bertie;SHA0034;Walnut effect wood pole 16mm;1;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3035;SHAPE;Shape;Bertie;SHA0035;Oak effect wood pole 16mm;0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3036;SHAPE;Shape;Bertie;SHA0036;Ascot pole;1;;1;w;2.4;;;;;;;MtM( roman, side control roller, electric)
+3037;SHAPE;Shape;Bertie;SHA0037;Chrome Pole (for acorn finial);0;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3038;SHAPE;Shape;Bertie;SHA0038;Brass Pole (for acorn finial);1;;1;w;3;;;;;;;MtM( roman, side control roller, electric)
+3039;SHAPE;Shape;;SHA0039;Vikki;0;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3040;SHAPE;Shape;;SHA0040;Bertie;1;;1;w;3;;;;;;;MtM( roman, side control roller,spring roller, electric)
+3041;SHAPE;Shape;;SHA0041;None;1;;0;w;;;;;;;;
+4001;CONTROL;Control;side control standard;CON0001;Standard side control;1;;10;fixed;;;;;;weight of cloth;;
+4002;CONTROL;Control;side control heavy duty;CON0002;Heavy duty side control;0;;10;fixed;3;;;;;;;
+4003;CONTROL;Control;Spring;CON0003;Spring mechanism;1;;10;fixed;2.4;;;;;;;
+4004;CONTROL;Control;Speed reducer;CON0004;Spring speed reducer;0;;10;fixed;2.4;;;;;;;
+4005;CONTROL;Control;Electric;CON0005;Battery powered remote electric;1;;10;fixed;;;;;;weight of cloth;;
+4006;CONTROL;Control;roman;CON0006;Roman;0;;10;fixed;2.4;;;;;;;
+5001;BRAID;Braid;;BRD0001;Bobble Fringe Natural;1;;5.43;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5002;BRAID;Braid;;BRD0002;Box Natural;0;;2.25;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5003;BRAID;Braid;;BRD0003;Box Primula;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5004;BRAID;Braid;;BRD0004;Carpet Straw;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5005;BRAID;Braid;;BRD0005;Carpet Wax;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5006;BRAID;Braid;;BRD0006;Charleston Champagne;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5007;BRAID;Braid;;BRD0007;Charleston Pearl;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5008;BRAID;Braid;;BRD0008;Clear Glass Beads;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5009;BRAID;Braid;;BRD0009;Glitter Gold;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5010;BRAID;Braid;;BRD0010;Glitter Silver;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5011;BRAID;Braid;;BRD0011;Katherine trim Blue;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5012;BRAID;Braid;;BRD0012;Katherine trim Clear;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5013;BRAID;Braid;;BRD0013;Katherine trim Green;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5014;BRAID;Braid;;BRD0014;Katherine trim Pink;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5015;BRAID;Braid;;BRD0015;Leather Black;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5016;BRAID;Braid;;BRD0016;Leather Brown;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5017;BRAID;Braid;;BRD0017;Leather Cream;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5018;BRAID;Braid;;BRD0018;Mother of Pearl;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5019;BRAID;Braid;;BRD0019;Natural/Gold Pom Pom;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5020;BRAID;Braid;;BRD0020;Pearl Button Tape;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5021;BRAID;Braid;;BRD0021;Woolie Aran;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5022;BRAID;Braid;;BRD0022;Jute Twine;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5023;BRAID;Braid;;BRD0023;Jute Bark;1;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5024;BRAID;Braid;;BRD0024;Woolie Cloud;0;;3;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+5025;BRAID;Braid;;BRD0025;Iris Chocolate;1;;4.34;w;;;bertie, classic, vikki, straight;;;;;MtM( roman, side control roller,spring roller, electric)
+6001;SIDE;Side;;SID0001;Left;1;;0;fixed;;;;;;;;
+6002;SIDE;Side;;SID0002;Right;1;;0;fixed;;;;;;;;
+6003;SIDE;Side;;SID0003;Spring;1;;0;fixed;;;;;;;;
+7001;TYPE;Type;;TYP0001;Roller;1;;0;fixed;;;;;;;;
+7002;TYPE;Type;;TYP0002;Roman;1;;0;fixed;;;;;;;;

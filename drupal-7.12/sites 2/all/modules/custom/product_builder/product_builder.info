@@ -1,0 +1,4 @@
+name = Product Builder
+description = "Builds up a valid selection of products"
+core = 7.x
+package = Product Builder
